@@ -1,2 +1,0 @@
-# keybind-planner
-Keybind Planner

@@ -30,11 +30,8 @@ body {
     display: flex;
 }
 
-.key {
+.key, .control {
     border: 2px solid;
-    border-color: gray;
-    height: 40px;
-    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,14 +40,64 @@ body {
     text-transform: capitalize;
     cursor: pointer;
 }
+.key {
+    border-color: gray;
+    height: 50px;
+    width: 50px;
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+}
+#top-row .key {
+    height: 24px;
+}
+.control {
+    height: 40px;
+    width: 40px;
+}
 
-/* Specific Keys */
+/* Specific keys */
 #backspace, #tab {
     width: 50px;
 }
-#caps, #enter {
-    width: 68px;
+#caps {
+    width: 72px;
+}
+#enter {
+    width: 84px;
 }
 #left-shift, #right-shift {
-    width: 91px;
+    width: 106px;
+}
+#space {
+    width: 274px;
+}
+#up-arrow {
+    height: 24px;
+}
+#down-arrow {
+    height: 23px;
+}
+
+/* Specific colors */
+#red {
+    background-color: red;
+}
+#orange {
+    background-color: orange;
+}
+#yellow {
+    background-color: yellow;
+}
+#green {
+    background-color: lightgreen;
+}
+#blue {
+    background-color: aqua;
+}
+#pink {
+    background-color: fuchsia;
+}
+#white {
+    background-color: white;
 }

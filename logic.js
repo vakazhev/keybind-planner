@@ -1,7 +1,16 @@
 var defaultColor = 'gray';
 var color = defaultColor;
 
+
 var textModeEnabled = false;
+
+
+var backgroundDark = '#060606';
+var backgroundLight = '#e4d8ce';
+
+var themeDark = 'dark';
+var themeLight = 'light';
+var theme = themeDark;
 
 
 function changeColor(element) {
@@ -27,8 +36,16 @@ function changeColor(element) {
 
 function setColor(newColor) {
     color = newColor;
-    textModeEnabled = false;
     textModeOff();
+}
+
+
+function setAccentColor() {
+    if (theme == themeDark) {
+        color = 'white';
+    } else {
+        color = 'black';
+    }
 }
 
 
@@ -45,4 +62,27 @@ function textModeOn() {
 
 function textModeOff() {
     textModeEnabled = false;
+}
+
+
+function switchTheme() {
+    if (theme == themeDark) {
+        theme = themeLight;
+
+        document.body.style.backgroundColor = backgroundLight;
+        changeColorAll('black');
+    } else {
+        theme = themeDark;
+
+        document.body.style.backgroundColor = backgroundDark;
+        changeColorAll('white');
+    }
+}
+
+
+function changeColorAll(color) {
+    var all = document.getElementsByTagName("*");
+    for (var i = 0, max = all.length; i < max; i++) {
+        all[i].style.color = color;
+    }
 }

@@ -28,6 +28,7 @@ body {
 
 .row {
     display: flex;
+    justify-content: space-around;
 }
 
 .key, .control {
@@ -50,27 +51,40 @@ body {
 }
 #top-row .key {
     height: 24px;
+    width: 46px;
 }
 .control {
     height: 40px;
     width: 40px;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button {
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+
 /* Specific keys */
 #backspace, #tab {
-    width: 50px;
+    width: 60px;
 }
 #caps {
-    width: 72px;
+    width: 82px;
 }
 #enter {
     width: 84px;
 }
 #left-shift, #right-shift {
-    width: 106px;
+    width: 111px;
 }
 #space {
-    width: 274px;
+    width: 284px;
 }
 #up-arrow {
     height: 24px;

@@ -27,6 +27,7 @@
                 <div class="key" id="f10" onclick="changeColor(this)">f10</div>
                 <div class="key" id="f11" onclick="changeColor(this)">f11</div>
                 <div class="key" id="f12" onclick="changeColor(this)">f12</div>
+                <div class="key" id="print-screen" onclick="changeColor(this)">screen</div>
                 <div class="key" id="del" onclick="changeColor(this)">del</div>
             </div>
 
@@ -119,7 +120,7 @@
         </div>
     </div>
 
-    <div id="palette">
+    <footer>
         <div class="row">
             <div class="control" id="red" onclick="setColor('red')"></div>
             <div class="control" id="orange" onclick="setColor('orange')"></div>
@@ -127,10 +128,12 @@
             <div class="control" id="green" onclick="setColor('lightgreen')"></div>
             <div class="control" id="blue" onclick="setColor('aqua')"></div>
             <div class="control" id="pink" onclick="setColor('fuchsia')"></div>
-            <div class="control" id="white" onclick="setColor('white')"></div>
+            <div class="control" id="white" onclick="setAccentColor()"></div>
             <div class="control" onclick="resetColor()"></div>
             <div class="control" onclick="textModeOn()">a</div>
         </div>
+
+        <div class="control button" id="button-theme" onclick="switchTheme()">Theme</div>
     </div>
 </body>
 </html>

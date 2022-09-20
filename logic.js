@@ -1,9 +1,7 @@
 var defaultColor = 'gray';
 var color = defaultColor;
 
-
 var textModeEnabled = false;
-
 
 var backgroundDark = '#060606';
 var backgroundLight = '#e4d8ce';
@@ -15,74 +13,60 @@ var theme = themeDark;
 
 function changeColor(element) {
     if (textModeEnabled) {
-        var previous = element.textContent;
-
-        var input = prompt('Button name', previous);
-        if (!input) {
-            return;
-        }
-
-        element.textContent = input;
+        element.textContent = prompt('Button name', element.textContent);
         return;
     }
 
-    if (element.style.borderColor == color) {
-        element.style.borderColor = defaultColor;
-    } else {
-        element.style.borderColor = color;
-    }
+    element.style.borderColor = element.style.borderColor == color ? defaultColor : color;
 }
 
 
 function setColor(newColor) {
     color = newColor;
-    textModeOff();
+    disableTextMode();
 }
 
 
 function setAccentColor() {
-    if (theme == themeDark) {
-        color = 'white';
-    } else {
-        color = 'black';
-    }
+    color = theme == themeDark ? 'white' : 'black';
+    disableTextMode();
 }
 
 
 function resetColor() {
     color = defaultColor;
-    textModeOff();
+    disableTextMode();
 }
 
 
-function textModeOn() {
+function enableTextMode() {
     textModeEnabled = true;
 }
 
 
-function textModeOff() {
+function disableTextMode() {
     textModeEnabled = false;
 }
 
 
-function switchTheme() {
-    if (theme == themeDark) {
-        theme = themeLight;
+// function switchTheme() {
+//     if (theme == themeDark) {
+//         theme = themeLight;
 
-        document.body.style.backgroundColor = backgroundLight;
-        changeColorAll('black');
-    } else {
-        theme = themeDark;
+//         document.body.style.backgroundColor = backgroundLight;
+//         changeColorAll('black');
+//     } else {
+//         theme = themeDark;
 
-        document.body.style.backgroundColor = backgroundDark;
-        changeColorAll('white');
-    }
-}
+//         document.body.style.backgroundColor = backgroundDark;
+//         changeColorAll('white');
+//     }
+// }
 
 
-function changeColorAll(color) {
-    var all = document.getElementsByTagName("*");
-    for (var i = 0, max = all.length; i < max; i++) {
-        all[i].style.color = color;
-    }
-}
+// function changeColorAll(color) {
+//     var all = document.getElementsByTagName("*");
+//     for (var i = 0, max = all.length; i < max; i++) {
+//         all[i].style.color = color;
+//     }
+// }

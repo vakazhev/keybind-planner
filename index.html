@@ -114,6 +114,8 @@
         </div>
 
         <div id="mouse">
+            <div class="key" id="m1" onclick="changeColor(this)">m1</div>
+            <div class="key" id="m2" onclick="changeColor(this)">m2</div>
             <div class="key" id="m3" onclick="changeColor(this)">m3</div>
             <div class="key" id="m4" onclick="changeColor(this)">m4</div>
             <div class="key" id="m5" onclick="changeColor(this)">m5</div>
@@ -130,10 +132,10 @@
             <div class="control" id="pink" onclick="setColor('fuchsia')"></div>
             <div class="control" id="white" onclick="setAccentColor()"></div>
             <div class="control" onclick="resetColor()"></div>
-            <div class="control" onclick="textModeOn()">a</div>
+            <div class="control" onclick="enableTextMode()">a</div>
         </div>
 
-        <div class="control button" id="button-theme" onclick="switchTheme()">Theme</div>
+        <!-- <div class="control button" id="button-theme" onclick="switchTheme()">Theme</div> -->
     </div>
 </body>
 </html>

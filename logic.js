@@ -3,12 +3,12 @@ var color = defaultColor;
 
 var textModeEnabled = false;
 
-var backgroundDark = '#060606';
-var backgroundLight = '#e4d8ce';
+// var backgroundDark = '#060606';
+// var backgroundLight = '#e4d8ce';
 
-var themeDark = 'dark';
-var themeLight = 'light';
-var theme = themeDark;
+// var themeDark = 'dark';
+// var themeLight = 'light';
+// var theme = themeDark;
 
 
 function changeColor(element) {
@@ -28,7 +28,8 @@ function setColor(newColor) {
 
 
 function setAccentColor() {
-    color = theme == themeDark ? 'white' : 'black';
+    // color = theme == themeDark ? 'white' : 'black';
+    color = 'white';
     disableTextMode();
 }
 

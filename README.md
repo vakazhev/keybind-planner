@@ -1,6 +1,6 @@
 ## Keybind Planner
 
-The purpose of this project is to help you in planning your keybinds for MMO RPG, IDE, etc.
+A simple tool to play with and visualize your key binds.
 
 #### Example
 
